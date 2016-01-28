@@ -88,7 +88,7 @@ textarea{
   justify-content: space-around;;
   align-items: center;
 }
-#radios > input, #isItFraud{
+#radios > input, #isItFraud, #fraudLooker{
   width: 3vw;
 }
 
