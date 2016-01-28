@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/auditapp')
 var app = express();
+var mongoose = require('mongoose')
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/auditapp')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

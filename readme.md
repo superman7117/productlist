@@ -11,4 +11,4 @@
 - Your code must be free of bugs!
 - Make a readme.md to describe your app (you may like to learn a little markdown to do this).  This will be shown on your Github page.
 
-> https://git.heroku.com/hidden-waters-19759.git
+> https://hidden-waters-19759.herokuapp.com/
