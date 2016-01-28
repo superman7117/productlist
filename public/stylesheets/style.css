@@ -94,10 +94,10 @@ textarea{
 
 #formBTN{
   margin-top: 3vw;
- border-radius: 30%;
- width: 97vw;
- height: 10vw;
- font-size: 7vw;
+  border-radius: 30%;
+  width: 97vw;
+  height: 10vw;
+  font-size: 7vw;
 }
 
 #logo {
@@ -110,4 +110,9 @@ textarea{
   background-size: contain;
   top: 0;
   right: 0;
+}
+
+.theC{
+  background-color: lightblue;
+  font-size: 2vw;
 }

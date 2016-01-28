@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 
 var auditSchema = mongoose.Schema({
-  companyName: {type: String},
+  companyName: {type: String, required: true},
   auditorName: {type: String},
   todaysDate: {type: String},
   carType: {type: String},

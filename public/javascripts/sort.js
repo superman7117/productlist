@@ -9,8 +9,14 @@ function initer(){
 }
 
 function sortbyCompany(){
+  console.log("yes sir");
   $.get('/users/sortc')
-  .done(function(data){})
+  .done(function(data){
+    console.log(data);
+    document.body.innerHTML = data
+    init();
+    initer();
+  })
 }
 
 function fraudFilter(){

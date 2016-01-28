@@ -24,6 +24,7 @@ function getNewJobView(){
   .done(function(data){
     document.body.innerHTML = data
     init();
+    initer()
   })
   .fail(function(err){if (err) console.log("ERR",err);})
 }
@@ -73,6 +74,7 @@ function goHome(){
   .done(function(data){
     document.body.innerHTML = data
     init();
+    initer()
   })
   .fail(function(err){if (err) console.log("ERR",err);})
 }

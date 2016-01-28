@@ -11,6 +11,17 @@ router.post('/delete', function(req, res, next) {
     })
   })
 });
+router.get('/sortc', function(req, res, next) {
+    Audit.find({}, function(err, docs){
+      var newDocs = docs.sort('companyName', 'asc')
+      res.render('index', {
+        title: 'Audi Audit',
+        jobs: newDocs
+        });
+
+    })
+
+});
 
 
 
