@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  button(id="newJobBTN") Start New Job
+  #yourJobs Finished Jobs
+  #allAudits  
+    .row
+      .theCompany Company Name
+      .theDate Date
+      .reimbursementAmount Reimbursement
+    each val, index in jobs
+      .row(class="#{val.isFraud}",data="#{val.id}")
+        .theCompany #{val.companyName}
+        .theDate #{val.todaysDate}
+        .reimbursementAmount $#{val.reimbursement}
+        .buttons
+          button(class="viewBTN") View Full Job
+          button(class="deleteBTN") Delete 
+    #totalReimbursement Total Claims Payouts
+            
+    
+
+block jscript
+  script(src='/javascripts/frontPage.js')

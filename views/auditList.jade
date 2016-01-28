@@ -1,0 +1,27 @@
+extends layout
+block content
+  input(id='companyName', type="text", placeholder='Company Name')
+  input(id='auditorName', type="text", placeholder='Auditor Name')
+  input(id='todaysDate', type="text", placeholder='Date')
+  input(id='carType', type="text", placeholder='Car Type')
+  textarea(id='description', type="text", placeholder='Damage Discription')
+  #radios 
+    input(id='radioTotaled', name='howBad', type="radio", value='Totaled') 
+    |  Totaled
+    input(id='radioSevere', name='howBad', type="radio", value='Severe')
+    |	 Severe
+    input(id='radioModerate', name='howBad', type="radio", value='Moderate')
+    |  Moderate
+    input(id='radioMinimal', name='howBad', type="radio", value='Minimal')
+    |	 Minimal
+    input(id='radioNoDamage', name='howBad', type="radio", value='No Damage')
+    |	 No Damage
+    input(id='radioNotCovered', name='howBad', type="radio", value='Not Covered')
+    |	 Not Covered
+  input(type="text", id="pictureInput", placeholder="Add Image URL Here")
+  input(type="checkbox", id="isItFraud") 
+  |	Fraudulent Claim
+  button(id="formBTN") Submit Form
+
+block jscript
+  script(src='/javascripts/frontPage.js')

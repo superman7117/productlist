@@ -1,0 +1,60 @@
+body {
+  /*background-image: url(http://www.adminbandit.com.au/wp-content/uploads/2013/03/audit.gif);*/
+  /*background-position: center;
+  background-size: contain;*/
+  background-color: oldlace;
+  color: navy;
+}
+
+#topsTitle{
+  color: navy;
+  font-size: 10vw;
+  padding-bottom: 1vw;
+  border-bottom: .5vw solid navy;
+}
+
+.tagLine {
+  font-size: 3vw;
+}
+
+#newJobBTN, .backToHome{
+  margin: 1vw 0 3vw 3vw;
+  height: 4vw;
+  width: 15vw;
+  color: navy;
+  font-size: 1.5vw;
+  border-radius: 1vw;
+}
+
+#yourJobs {
+  color: black;
+  padding-left: 3vw;
+  font-size: 4vw;
+  border-bottom: .2vw dashed navy;
+}
+
+.theCompany, .theDate, .reimbursementAmount{
+  min-width:22vw;
+  border-right: .2vw solid navy;
+  text-align: center;
+  min-height: 3.5vw;
+}
+
+.row {
+  width: 97vw;
+  margin-top: .5vw;
+  display: flex;
+  /*justify-content: space-around;*/
+  align-items: center;
+  font-size: 3vw;
+  border: .2vw solid navy;
+}
+.buttons{
+  width: 28vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.true {
+  background-color: red;
+}
