@@ -70,3 +70,44 @@ body {
 #totalReimbursement{
   font-size: 5vw;
 }
+
+input, textarea{
+  margin: 1vw 0 0 .5vw;
+  border-radius: .5vw;
+  height: 3vw;
+  width: 22vw;
+  font-size: 2vw;
+}
+textarea{
+  width: 98vw;
+  height: 5vw;
+}
+#radios{
+  width: 99vw;
+  display: flex;
+  justify-content: space-around;;
+  align-items: center;
+}
+#radios > input, #isItFraud{
+  width: 3vw;
+}
+
+#formBTN{
+  margin-top: 3vw;
+ border-radius: 30%;
+ width: 97vw;
+ height: 10vw;
+ font-size: 7vw;
+}
+
+#logo {
+  height: 15vw;
+  width: 35vw;
+  background-image: url('http://www.rhollensheadautosales.com/CarImages/320/2010AUD015a_320/2010AUD015a_320_01.png');
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: 0;
+  right: 0;
+}
