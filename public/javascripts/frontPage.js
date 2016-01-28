@@ -7,8 +7,18 @@ function init(){
   $('#formBTN').on('click', saveJobAndReturn)
   $('#allAudits').on('click', '.deleteBTN', deleter)
   $('#allAudits').on('click', '.viewBTN', viewJob)
+  addEmUp()
 }
-
+function addEmUp(){
+  var numAry =$(".reimbursementAmount").toArray().map(function(elem){
+    return $(elem).attr('data');
+  })
+  console.log('addEmUp',numAry);
+  var sum = numAry.reduce(function(acc, x){
+    return acc + parseInt(x)
+  },0)
+  $('#totalReimbursement').append(" $"+sum)
+}
 function getNewJobView(){
   $.get('/audits/auditList')
   .done(function(data){
@@ -34,6 +44,12 @@ function saveJobAndReturn(e){
   else{
     var isFraud = false;
   }
+  if(damageLevel === 'Totaled'){ var reimbursement = 20000}
+  else if(damageLevel === 'Severe'){ var reimbursement = 10000}
+  else if(damageLevel === 'Moderate'){ var reimbursement = 5000}
+  else if(damageLevel === 'Minimal'){ var reimbursement = 1000}
+  else if(damageLevel === 'No Damage'){ var reimbursement = -20}
+  else if(damageLevel === 'Not Covered'){ var reimbursement = 0}
   console.log('im gonna post');
   $.post("/audits/",{
     companyName: companyName,
@@ -43,7 +59,8 @@ function saveJobAndReturn(e){
     description: description,
     damageLevel: damageLevel,
     picture: picture,
-    isFraud: isFraud
+    isFraud: isFraud,
+    reimbursement: reimbursement
   })
   .done(function(data){
     goHome()

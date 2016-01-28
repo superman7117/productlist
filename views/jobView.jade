@@ -1,20 +1,20 @@
 extends layout
 
 block content
-  button(class="backToHome") Start New Job
-  #yourJobs Finished Jobs
+  button(class="backToHome") Home
   #allAudits  
-    //- .row(class="#{val.isFraud}",data="#{val.id}")
-    //-   //- .theCompany #{val.companyName}
-    //-   //- .theDate #{val.todaysDate}
-    //-   //- .reimbursementAmount $#{val.reimbursement}
-    //-   .buttons
-    //-     button(id="viewBTN") View Full Job
-    //-     button(id="editBTN") Edit 
-    //-     button(id="deleteBTN") Delete 
-      
+    h1 Company: #{jobs.companyName}
+    h5 Auditor: #{jobs.auditorName}
+    h5 Date: #{jobs.todaysDate}
+    h3 Type of Car: #{jobs.carType}
+    h3 Level of Damage: #{jobs.damageLevel}
+    h3 Description: #{jobs.description}
+    .urlPic(style="background-image: url(#{jobs.picture})")
+    h3 Fraud Alert: #{jobs.isFraud}
+    h1 Reimbursement: $#{jobs.reimbursement}
 
         
     
 
 block jscript
+  script(src='/javascripts/jobViewjs.js')

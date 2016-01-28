@@ -8,7 +8,7 @@ var auditSchema = mongoose.Schema({
   todaysDate: {type: String},
   carType: {type: String},
   description: {type: String},
-  damageLevel: {type: String},
+  damageLevel: {type: String, required: true},
   picture: {type: String},
   reimbursement: {type: Number},
   isFraud: {type: Boolean, default: false}

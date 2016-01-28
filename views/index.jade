@@ -5,14 +5,14 @@ block content
   #yourJobs Finished Jobs
   #allAudits  
     .row
-      .theCompany Company Name
-      .theDate Date
-      .reimbursementAmount Reimbursement
+      .theC Company Name
+      .theD Date
+      .yo Reimbursement
     each val, index in jobs
       .row(class="#{val.isFraud}",data="#{val.id}")
         .theCompany #{val.companyName}
         .theDate #{val.todaysDate}
-        .reimbursementAmount $#{val.reimbursement}
+        .reimbursementAmount(data="#{val.reimbursement}") $#{val.reimbursement}
         .buttons
           button(class="viewBTN") View Full Job
           button(class="deleteBTN") Delete 
@@ -22,3 +22,4 @@ block content
 
 block jscript
   script(src='/javascripts/frontPage.js')
+  script(src='/javascripts/sort.js')

@@ -5,7 +5,7 @@ var router = express.Router();
 
 var Audit = require('../models/audit')
 
-router.get('/auditList', function(req, res, next) {
+router.get('/auditList/', function(req, res, next) {
     res.render('auditList',{title: "Audi Audit"})
 });
 

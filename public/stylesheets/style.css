@@ -33,7 +33,7 @@ body {
   border-bottom: .2vw dashed navy;
 }
 
-.theCompany, .theDate, .reimbursementAmount{
+.theCompany, .theDate, .reimbursementAmount, .yo, .theC, .theD{
   min-width:22vw;
   border-right: .2vw solid navy;
   text-align: center;
@@ -57,4 +57,16 @@ body {
 }
 .true {
   background-color: red;
+}
+
+.urlPic {
+  height: 15vw;
+  width: 15vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#totalReimbursement{
+  font-size: 5vw;
 }
